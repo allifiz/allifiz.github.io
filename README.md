@@ -1,19 +1,18 @@
 # Sangkara Karya
 
-Website profil Sangkara Karya, studio web dan digital dari Garut, dibangun menggunakan HTML, CSS, dan JavaScript statis untuk GitHub Pages.
+Website profil studio **Sangkara Karya**, web & digital studio berbasis di Garut, Indonesia. Dipublikasikan sebagai situs statis menggunakan GitHub Pages.
 
-## Desain
+## Identitas visual
 
-Implementasi mengacu pada mockup editorial krem yang dipilih pada 22 November 2026. Komposisi hero, fotografi meja kerja, pilihan warna tembaga/navy, tipografi serif/sans, enam layanan, kartu proyek, alur kerja, FAQ, dan footer direkonstruksi sebagai antarmuka responsif.
+Desain mengikuti mockup dark editorial: latar **navy gelap**, tipografi **putih-krem**, dan aksen **tembaga** yang selaras dengan logo bunga Sangkara Karya.
 
-Folder `assets/` memuat potongan visual dari mockup konsep Sangkara Karya yang telah dibuat sebelumnya. Kartu proyek menggunakan gambar **ilustrasi**, bukan screenshot situs asli maupun bukti kerja untuk organisasi yang tampak dalam ilustrasi.
+- Warna: navy `#091b28`, navy lebih gelap `#071622`, tembaga `#d0742e`, krem `#fff0dc`.
+- Font: DM Serif Display (judul) dan DM Sans (antarmuka).
+- `favicon.svg`: simbol bunga Sangkara Karya (tanpa tulisan).
+- `assets/hero-facade.webp`: visual fasad gedung dengan simbol bunga berwarna tembaga, berasal dari aset gambar yang dipilih pemilik situs, dioptimalkan menjadi WebP untuk hero.
+- Kartu portofolio menggunakan ilustrasi konsep, **bukan tangkapan layar proyek nyata**.
 
-- Heading: DM Serif Display
-- Body: DM Sans
-- Palet: `#FAF6F0` / `#182D3A` / `#B45113`
-- Logo: bunga geometris asli Sangkara Karya (`favicon.svg`)
-
-## Jalankan lokal
+## Pengembangan lokal
 
 ```bash
 python3 -m http.server 8000
@@ -21,10 +20,10 @@ python3 -m http.server 8000
 
 Buka `http://localhost:8000`.
 
+## Deploy
+
+GitHub Pages dari branch `main`, dengan domain kustom di file `CNAME` (`allif.me`). Tidak memerlukan build step.
+
 ## Kontak
 
-Tombol konsultasi menggunakan email `bussiness@allif.me` seperti versi website sebelumnya. Pastikan alamat tersebut aktif. Website tidak memakai backend, mengumpulkan data pribadi, atau mengirim pesan otomatis.
-
-## Publikasi
-
-File `CNAME` tetap dipakai untuk domain kustom `allif.me` di GitHub Pages. Jangan hapus jika domain masih digunakan.
+Email: `bussiness@allif.me` (alamat yang telah digunakan di website sebelumnya, pastikan tetap aktif). Tautan konsultasi memakai `mailto:` dan tidak mengirim pesan otomatis.
