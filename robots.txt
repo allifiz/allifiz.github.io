@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://allif.me/sitemap.xml
+Sitemap: https://sangkarakarya.my.id/sitemap.xml
