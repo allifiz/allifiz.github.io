@@ -47,3 +47,12 @@
 .start-bottom p{font-size:15px;color:#c8d5da;margin-bottom:24px}
 @media(max-width:850px){.start-grid{grid-template-columns:1fr;gap:45px}.start-aside{max-width:740px}.start-hero{padding:35px 0 65px}.start-breadcrumb{margin-bottom:40px}}
 @media(max-width:520px){.start-form-card{padding:25px 21px}.start-two{grid-template-columns:1fr;gap:0}.start-main{padding:55px 0 70px}.start-hero h1{font-size:clamp(44px,10.8vw,62px)}.start-result-actions{flex-direction:column}.start-result-actions .btn{width:100%}}
+
+/* AJAX form feedback and anti-spam field. */
+.start-honey{position:absolute!important;left:-9999px!important;top:auto!important;height:1px!important;width:1px!important;overflow:hidden!important}
+.start-submit-info{font-size:11.5px!important;line-height:1.65;color:#697987;margin:11px 0 4px}
+.start-request-status{font-size:13px;line-height:1.65;margin:12px 0;min-height:1.5em;color:#274559}
+.start-request-status.is-success{border-left:3px solid #347b50;background:#e8f4ed;padding:11px 13px;color:#1c5335}
+.start-request-status.is-error{border-left:3px solid #a94d25;background:#f8e9e1;padding:11px 13px;color:#823b22}
+.start-create:disabled{opacity:.65;cursor:wait}
+.start-privacy a{color:#9b572b;text-decoration:underline;text-underline-offset:2px}

@@ -45,3 +45,9 @@ Domain web: `sangkarakarya.my.id` (terdaftar di BOC). DNS apex menggunakan empat
 - Parameter `utm_source`, `utm_medium`, `utm_campaign` disertakan dalam brief jika pengunjung benar-benar menyiapkan pesan.
 - Skrip video dan bio tersedia di `marketing/social-launch-kit.md`.
 - Setup Search Console tersedia di `marketing/google-search-console.md` dan **masih memerlukan verifikasi TXT oleh pemilik domain**.
+
+## Conversion Optimization V2
+- `/mulai/` sekarang mendukung pengiriman AJAX melalui FormSubmit, dengan fallback email dan salin ringkasan.
+- `config.js` berisi konfigurasi publik untuk email, nomor WhatsApp, dan ID GA4. Nomor WhatsApp dan Measurement ID belum diberikan dan sengaja dibiarkan kosong.
+- `analytics.js` menangani event serta persetujuan analitik; `script.js` menangani CTA mengambang.
+- **Panduan aktivasi wajib:** `marketing/conversion-v2-setup.md`.

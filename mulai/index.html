@@ -70,7 +70,11 @@
           <div class="start-step"><span>FORMULIR BRIEF</span><span>✳</span></div>
           <h2>Ceritakan kebutuhanmu.</h2>
           <p>Isi yang kamu ketahui saja. Detail lainnya dapat dibicarakan kemudian.</p>
-          <form id="brief-builder">
+          <form id="brief-builder" method="POST" action="https://formsubmit.co/bussiness@allif.me">
+            <input type="hidden" name="_subject" value="Konsultasi Proyek Sangkara Karya">
+            <input type="hidden" name="_url" value="https://sangkarakarya.my.id/mulai/">
+            <input type="hidden" name="_template" value="table">
+            <div class="start-honey" aria-hidden="true"><label>Jangan isi<input name="_honey" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="start-two">
               <label for="brief-nama">Nama <span>*</span><input id="brief-nama" name="nama" required minlength="2" maxlength="100" autocomplete="name" placeholder="Nama kamu"></label>
               <label for="brief-email">Email <span>*</span><input id="brief-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="nama@email.com"></label>
@@ -106,11 +110,13 @@
                 </select>
               </label>
             </div>
-            <button class="btn btn-primary start-create" type="submit">Susun ringkasan proyek ↗</button>
+            <button class="btn btn-primary start-create" id="brief-send" type="submit">Kirim permintaan konsultasi ↗</button>
+            <p class="start-submit-info">Pesan dikirim melalui FormSubmit tanpa membuka aplikasi email. Jika gagal, ringkasan dan opsi email tetap tersedia.</p>
+            <p class="start-request-status" id="brief-request-status" role="status" aria-live="polite"></p>
           </form>
           <div class="start-result" id="brief-result" hidden aria-live="polite">
-            <h3>Ringkasanmu siap.</h3>
-            <p>Periksa isinya, lalu salin atau buka aplikasi emailmu untuk mengirimkan ke Sangkara Karya.</p>
+            <h3 id="brief-result-title">Ringkasan konsultasi</h3>
+            <p id="brief-result-help">Simpan ringkasan atau gunakan email sebagai alternatif bila pengiriman otomatis gagal.</p>
             <label for="brief-preview">Pratinjau brief</label>
             <textarea id="brief-preview" rows="13" readonly></textarea>
             <div class="start-result-actions">
@@ -119,8 +125,8 @@
             </div>
             <p class="start-copy-status" id="brief-copy-status" role="status"></p>
           </div>
-          <p class="start-privacy">Formulir ini diproses di browsermu. Tidak ada data yang tersimpan atau terkirim otomatis ke server Sangkara Karya. Pengiriman email dilakukan sendiri melalui aplikasi email.</p>
-          <noscript><p>JavaScript diperlukan untuk menyusun ringkasan. Hubungi <a href="mailto:bussiness@allif.me">bussiness@allif.me</a> secara langsung.</p></noscript>
+          <p class="start-privacy">Informasi yang dikirim diproses oleh <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a> agar masuk ke email Sangkara Karya. Pengiriman pertama memerlukan aktivasi alamat email penerima. Situs ini tidak menyimpan brief ke database.</p>
+          <noscript><p>Tanpa JavaScript, formulir akan dibuka melalui FormSubmit. Alternatif: kirim email ke <a href="mailto:bussiness@allif.me">bussiness@allif.me</a>.</p></noscript>
         </div>
       </div>
     </section>
@@ -138,6 +144,8 @@
     <div class="footer-links"><h3>Navigasi</h3><a href="/">Beranda</a><a href="/#layanan">Layanan</a><a href="/#portofolio">Portofolio</a></div>
     <div class="footer-contact"><h3>Kontak</h3><a href="mailto:bussiness@allif.me">bussiness@allif.me</a><span>Garut, Jawa Barat</span><div class="brand-social" aria-label="Media sosial Sangkara Karya"><span class="brand-social-label">Media sosial</span><a href="https://www.instagram.com/sangkara_karya/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Sangkara Karya">@sangkara_karya <span aria-hidden="true">↗</span></a><a href="https://www.tiktok.com/@sangkara.karya" target="_blank" rel="noopener noreferrer" aria-label="TikTok Sangkara Karya">@sangkara.karya <span aria-hidden="true">↗</span></a></div></div>
   </div><div class="container footer-bottom"><span>© <span id="year">2026</span> Sangkara Karya.</span><span>Web &amp; Digital Studio • Indonesia</span></div></footer>
+  <script src="/config.js" defer></script>
+  <script src="/analytics.js" defer></script>
   <script src="/script.js" defer></script>
   <script src="/mulai/brief.js" defer></script>
 </body>
