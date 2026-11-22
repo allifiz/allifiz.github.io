@@ -1,34 +1,28 @@
-"use strict";
-const year = document.getElementById("year");
-if (year) year.textContent = String(new Date().getFullYear());
+'use strict';
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-const menuButton = document.querySelector(".menu-toggle");
-const menu = document.getElementById("nav-menu");
-if (menuButton && menu) {
-  const setMenu = (isOpen) => {
-    menu.classList.toggle("open", isOpen);
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
-  };
-  menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
-  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
-  document.addEventListener("click", (e) => { if (!menu.contains(e.target) && !menuButton.contains(e.target)) setMenu(false); });
-  window.addEventListener("resize", () => { if (window.innerWidth > 760) setMenu(false); });
+const toggle = document.querySelector('.menu-toggle');
+const links = document.getElementById('nav-links');
+if (toggle && links) {
+  function setOpen(open) {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+    links.classList.toggle('is-open', open);
+  }
+  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', event => { if (!toggle.contains(event.target) && !links.contains(event.target)) setOpen(false); });
 }
 
-const form = document.getElementById("project-form");
-if (form) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    const nama = document.getElementById("nama").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const jenis = document.getElementById("jenis").value;
-    const pesan = document.getElementById("pesan").value.trim();
-    if (!nama || !email || !jenis || !pesan) return;
-    const subject = "Konsultasi Proyek Sangkara Karya - " + jenis;
-    const body = "Halo Sangkara Karya,\n\nSaya ingin konsultasi mengenai proyek digital.\n\nNama: " + nama + "\nEmail: " + email + "\nJenis kebutuhan: " + jenis + "\n\nDetail proyek:\n" + pesan + "\n\nTerima kasih.";
-    window.location.href = "mailto:bussiness@allif.me?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-  });
+const anchors = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+if ('IntersectionObserver' in window) {
+  const sections = anchors.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
+    if (!visible) return;
+    anchors.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`));
+  }, {rootMargin:'-18% 0px -64% 0px', threshold:[0,0.15,0.5]});
+  sections.forEach(section => observer.observe(section));
 }
