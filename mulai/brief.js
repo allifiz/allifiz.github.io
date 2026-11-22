@@ -10,9 +10,6 @@
   const clean=value=>(value||'').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,48);
   const campaign=['utm_source','utm_medium','utm_campaign'].map(k=>[k,clean(query.get(k))]).filter(x=>x[1]);
   const field=id=>document.getElementById(id).value.trim();
-  const track=(name,props={})=>{if(typeof window.SangkaraTrack==='function')window.SangkaraTrack(name,props);};
-  let begun=false;
-  form.addEventListener('focusin',()=>{if(!begun){begun=true;track('begin_brief',{event_category:'conversion'});}});
   form.addEventListener('submit',async event=>{
     event.preventDefault();
     if(submit.disabled||!form.reportValidity())return;
@@ -52,20 +49,17 @@
       requestStatus.className='start-request-status is-success';
       requestStatus.textContent='Permintaan diterima layanan formulir. Pesan masuk ke inbox setelah email penerima diaktifkan dan diproses oleh penyedia.';
       help.textContent='Simpan ringkasan ini sebagai cadangan. Pengiriman pertama mungkin menunggu aktivasi FormSubmit oleh pemilik situs.';
-      track('submit_brief',{event_category:'conversion',service_type:jenis,source:campaign.find(x=>x[0]==='utm_source')?.[1]||'direct'});
       form.reset();
     }catch(error){
       requestStatus.className='start-request-status is-error';
       requestStatus.textContent='Pengiriman otomatis gagal atau belum dapat dipastikan. Gunakan tombol Buka email atau Salin ringkasan di bawah.';
       help.textContent='Ringkasanmu aman di halaman ini, tetapi belum terbukti terkirim ke inbox.';
-      track('brief_error',{event_category:'conversion',service_type:jenis});
     }finally{
       clearTimeout(timer);
       submit.disabled=false;submit.textContent='Kirim permintaan konsultasi ↗';
       result.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
     }
   });
-  mail.addEventListener('click',()=>track('contact_click',{event_category:'conversion',link_type:'email_fallback'}));
   copy.addEventListener('click',async()=>{
     try{
       await navigator.clipboard.writeText(preview.value);

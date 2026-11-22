@@ -35,19 +35,19 @@ Domain web: `sangkarakarya.my.id` (terdaftar di BOC). DNS apex menggunakan empat
 ## SEO 2026
 - Beranda dioptimalkan untuk pencarian jasa website di Garut.
 - Halaman layanan khusus: /website-company-profile/, /website-sekolah-pesantren/, /landing-page-umkm/, /sistem-web-custom/.
-- Sitemap mencantumkan 5 URL. SEO CSS di `seo.css`.
+- Sitemap mencantumkan 6 URL. SEO CSS di `seo.css`.
 - Media sosial dan Search Console harus dihubungkan lewat akun pemilik.
 - Rencana konten ada di `marketing/30-day-growth-plan.md`.
 
 ## Mulai Proyek (social landing)
 - `/mulai/` adalah halaman untuk link bio TikTok dan Instagram.
-- Pembuat brief menggunakan JavaScript di browser; pesan tidak disimpan atau dikirim otomatis.
+- Formulir brief dapat dikirim via FormSubmit, setelah penerima email mengaktifkan layanan. Tersedia fallback email dan salin ringkasan.
 - Parameter `utm_source`, `utm_medium`, `utm_campaign` disertakan dalam brief jika pengunjung benar-benar menyiapkan pesan.
 - Skrip video dan bio tersedia di `marketing/social-launch-kit.md`.
 - Setup Search Console tersedia di `marketing/google-search-console.md` dan **masih memerlukan verifikasi TXT oleh pemilik domain**.
 
 ## Conversion Optimization V2
 - `/mulai/` sekarang mendukung pengiriman AJAX melalui FormSubmit, dengan fallback email dan salin ringkasan.
-- `config.js` berisi konfigurasi publik untuk email, nomor WhatsApp, dan ID GA4. Nomor WhatsApp dan Measurement ID belum diberikan dan sengaja dibiarkan kosong.
-- `analytics.js` menangani event serta persetujuan analitik; `script.js` menangani CTA mengambang.
+- `config.js` berisi konfigurasi publik untuk email dan WhatsApp resmi `085759907854` (`6285759907854`).
+- `script.js` menangani CTA mengambang menuju WhatsApp dengan teks konsultasi. GA4 dan banner izin analitik telah dihapus sesuai keputusan pemilik.
 - **Panduan aktivasi wajib:** `marketing/conversion-v2-setup.md`.

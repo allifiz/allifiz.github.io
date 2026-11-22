@@ -29,23 +29,6 @@ if('IntersectionObserver' in window && anchors.length){
 }
 (function(){
   const conf=window.SANGKARA_CONFIG||{};
-  const track=(name,params)=>{if(typeof window.SangkaraTrack==='function')window.SangkaraTrack(name,params||{});};
-  const serviceByPath={
-    '/website-company-profile/':'website_bisnis',
-    '/website-sekolah-pesantren/':'website_sekolah',
-    '/landing-page-umkm/':'landing_page_umkm',
-    '/sistem-web-custom/':'sistem_custom'
-  };
-  const service=serviceByPath[window.location.pathname];
-  if(service)track('view_service',{event_category:'engagement',service_type:service});
-  document.addEventListener('click',event=>{
-    const a=event.target.closest('a[href]');
-    if(!a)return;
-    const href=a.getAttribute('href')||'';
-    if(href.startsWith('mailto:'))track('contact_click',{event_category:'conversion',link_type:'email'});
-    else if(href.includes('wa.me/'))track('whatsapp_click',{event_category:'conversion',link_type:'whatsapp'});
-    else if(href.includes('/mulai/'))track('consultation_click',{event_category:'conversion',link_type:'brief'});
-  });
   const phone=typeof conf.whatsappNumber==='string'?conf.whatsappNumber.replace(/[^0-9]/g,''):'';
   const hasWhatsApp=/^[1-9][0-9]{8,14}$/.test(phone);
   const isBrief=window.location.pathname.replace(/index\.html$/,'')==='/mulai/';
