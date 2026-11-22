@@ -38,3 +38,10 @@ Domain web: `sangkarakarya.my.id` (terdaftar di BOC). DNS apex menggunakan empat
 - Sitemap mencantumkan 5 URL. SEO CSS di `seo.css`.
 - Media sosial dan Search Console harus dihubungkan lewat akun pemilik.
 - Rencana konten ada di `marketing/30-day-growth-plan.md`.
+
+## Mulai Proyek (social landing)
+- `/mulai/` adalah halaman untuk link bio TikTok dan Instagram.
+- Pembuat brief menggunakan JavaScript di browser; pesan tidak disimpan atau dikirim otomatis.
+- Parameter `utm_source`, `utm_medium`, `utm_campaign` disertakan dalam brief jika pengunjung benar-benar menyiapkan pesan.
+- Skrip video dan bio tersedia di `marketing/social-launch-kit.md`.
+- Setup Search Console tersedia di `marketing/google-search-console.md` dan **masih memerlukan verifikasi TXT oleh pemilik domain**.
