@@ -70,3 +70,10 @@ Akun @username perlu diperiksa dan dibuat oleh pemilik. Jangan menambahkan tauta
 - Pinned post yang disarankan: video 1, 2, dan perkenalan studio.
 - Catat setiap pekan: tayangan, kunjungan profil, klik bio (jika fitur analytics tersedia), brief yang disalin/dikirim dan percakapan masuk.
 - Parameter UTM di atas hanya dicantumkan dalam brief yang dibuat pengunjung; tidak ada tracking diam-diam atau data yang dikirim ke analytics.
+
+## Akun sosial resmi (dikonfirmasi pemilik pada 22 November 2026)
+- TikTok: https://www.tiktok.com/@sangkara.karya (@sangkara.karya)
+- Instagram: https://www.instagram.com/sangkara_karya/ (@sangkara_karya)
+- Tautan bio TikTok: https://sangkarakarya.my.id/mulai/?utm_source=tiktok&utm_medium=profile&utm_campaign=organic
+- Tautan bio Instagram: https://sangkarakarya.my.id/mulai/?utm_source=instagram&utm_medium=profile&utm_campaign=organic
+- Pengecekan otomatis ke profil sosial dibatasi oleh platform. Bio, postingan, dan insight akun belum dapat diaudit langsung.

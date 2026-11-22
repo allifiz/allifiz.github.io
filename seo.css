@@ -53,3 +53,9 @@
 .detail-cta .btn{white-space:nowrap}
 @media(max-width:850px){.detail-two-col{grid-template-columns:1fr;gap:26px}.detail-related-list{grid-template-columns:1fr 1fr}.detail-cta>.container{flex-direction:column;align-items:start;gap:23px}}
 @media(max-width:640px){.seo-route-grid,.detail-scope-grid,.detail-related-list{grid-template-columns:1fr}.detail-hero{padding:34px 0 66px}.detail-breadcrumb{margin-bottom:34px}.detail-section,.detail-scope{padding:60px 0}.seo-routes{padding:53px 0}.detail-cta h2{font-size:32px}.seo-route{min-height:155px}}
+
+/* Official brand social profile links shared by the site owner. */
+.brand-social{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.16);width:100%}
+.brand-social-label{font-size:10px!important;letter-spacing:.09em;text-transform:uppercase;color:#f0b071!important;font-weight:700}
+.footer-contact .brand-social a{font-size:11px;color:#dae3e6;overflow-wrap:anywhere;display:flex;align-items:center;gap:8px;line-height:1.5}
+.footer-contact .brand-social a:hover,.footer-contact .brand-social a:focus-visible{color:#f4ba88}
