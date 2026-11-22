@@ -31,3 +31,10 @@ Email: `bussiness@allif.me` (alamat yang telah digunakan di website sebelumnya, 
 ## Pengaturan domain baru
 
 Domain web: `sangkarakarya.my.id` (terdaftar di BOC). DNS apex menggunakan empat A record GitHub Pages `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. `www` (opsional tetapi direkomendasikan) menggunakan CNAME ke `allifiz.github.io`. Pastikan Custom domain pada Settings > Pages sesuai dan Enforce HTTPS diaktifkan setelah sertifikat tersedia. Email `bussiness@allif.me` tetap digunakan sebagai kontak sampai layanan email baru disiapkan.
+
+## SEO 2026
+- Beranda dioptimalkan untuk pencarian jasa website di Garut.
+- Halaman layanan khusus: /website-company-profile/, /website-sekolah-pesantren/, /landing-page-umkm/, /sistem-web-custom/.
+- Sitemap mencantumkan 5 URL. SEO CSS di `seo.css`.
+- Media sosial dan Search Console harus dihubungkan lewat akun pemilik.
+- Rencana konten ada di `marketing/30-day-growth-plan.md`.

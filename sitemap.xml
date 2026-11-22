@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://sangkarakarya.my.id/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://sangkarakarya.my.id/</loc></url>
+  <url><loc>https://sangkarakarya.my.id/website-company-profile/</loc></url>
+  <url><loc>https://sangkarakarya.my.id/website-sekolah-pesantren/</loc></url>
+  <url><loc>https://sangkarakarya.my.id/landing-page-umkm/</loc></url>
+  <url><loc>https://sangkarakarya.my.id/sistem-web-custom/</loc></url>
+</urlset>
