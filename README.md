@@ -1,8 +1,8 @@
 # Sangkara Karya
 
-Website resmi **Sangkara Karya**, studio digital independen berbasis di Garut, Indonesia.
+Website resmi **Sangkara Karya**, web dan digital studio berbasis di Garut, Indonesia. Identitas visual terinspirasi dari simbol bunga Sangkara Karya: tembaga-oranye, navy, dan putih hangat.
 
-Layanan: website bisnis, landing page, sistem web custom, website katalog/toko online, UI/UX dan redesign, serta maintenance dan optimasi.
+Layanan: website profil bisnis, landing page, sistem web sesuai kebutuhan, katalog/toko online, desain UI/UX, perawatan website, dan pengembangan lanjutan.
 
 ## Menjalankan secara lokal
 
@@ -28,3 +28,9 @@ Form konsultasi memakai \`mailto:\`, bukan backend atau penyimpanan data. Pengun
 ## Konten portofolio
 
 Visual proyek adalah **ilustrasi konsep**, bukan screenshot dari aplikasi. Tautan mengarah ke repositori proyek masing-masing.
+## Identitas visual
+
+- Simbol: bunga geometris Sangkara Karya di `favicon.svg` (header, footer, favicon).
+- Warna utama: navy `#142b3c`, tembaga `#bd621c`, krem `#fbf8f2`, dan emas pasir `#e8ad62`.
+- Tipografi: Manrope (judul), DM Sans (isi), dan Instrument Serif (aksen judul).
+- Bahasa utama website: Bahasa Indonesia. Hindari membawa identitas visual atau copywriting brand sebelumnya.
